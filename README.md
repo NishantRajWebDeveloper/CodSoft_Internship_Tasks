@@ -1,2 +1,2 @@
 # CodSoft_Internship_Tasks
-CodSoft Web development Internship Tasks
+This is the repository that holds all the tasks that I completed during my web development internship at "CODSOFT"
