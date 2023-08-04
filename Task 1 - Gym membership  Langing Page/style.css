@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to bottom, rgb(244, 241, 239)10%, rgb(211 178 161)100%);
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 80vw;
+    font-size: 20px;
+}
+
+/* navbar css */
+
+.gym-name {
+    color: rgb(111 84 69);
+}
+
+.navbar {
+    display: flex;
+    height: 60px;
+    font-family: Nunito;
+}
+
+.navbar li {
+    list-style: none;
+    margin: 0 12px;
+
+}
+
+.navbar li:hover {
+    color: rgba(240, 84, 0, 0.943);
+    cursor: pointer;
+}
+
+.btn {
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    background-color: rgb(216, 187, 171, 0.4);
+}
+
+/* section 1 css */
+
+.topleft {
+    width: 50%;
+}
+
+.topright {
+    width: 50%;
+}
+
+.section1 {
+    height: 92.5vh;
+}
+
+.bodybuilder {
+    height: 90vh;
+    margin-top: 20px;
+    float: right;
+}
+
+.dumbbell {
+    height: 35vh;
+    padding-bottom: 70px;
+    padding-left: 150px;
+}
+
+/* section 2 css */
+
+.section2 {
+    height: 95vh;
+}
+
+.section2 p {
+    margin: 2px 150px;
+}
+
+.price-box {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 1.2rem;
+}
+
+.box1,
+.box2,
+.box3 {
+    width: 20vw;
+    height: 50vh;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: rgba(243, 240, 238, 0.89);
+    -webkit-box-shadow: 11px 11px 12px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 11px 11px 12px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 11px 11px 12px 0px rgba(0, 0, 0, 0.75);
+}
+
+.price-box h6 {
+    margin: 10px;
+    font-weight: lighter;
+    font-size: 2rem;
+    border-bottom: 2px solid black;
+}
+
+.price-box h2 {
+    margin: 30px;
+    font-size: 1.8rem;
+}
+
+.price-box h2 small {
+    font-weight: lighter;
+}
+
+.price-box ul {
+    list-style: none;
+    margin: 20px;
+}
+
+.price-box ul del {
+    color: rgb(203, 189, 180);
+}
+
+.price-box button {
+    width: 15vw;
+    height: 5vh;
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 1.3rem;
+}
+
+.price-box button:hover {
+    background: rgba(245, 201, 177, 0.534);
+    color: rgb(122, 47, 7);
+}
+
+/* section 3 css */
+
+.section3 {
+    height: 80vh;
+}
+
+.table {
+    width: 50vw;
+    height: 50vh;
+    border-collapse: collapse;
+    margin-top: 50px;
+}
+
+.table th,
+td {
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.table td {
+    font-size: 17px;
+}
+
+footer {
+    padding: 10px;
+    width: 100%;
+    background-color: black;
+    color: aliceblue;
+}

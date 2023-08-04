@@ -1,0 +1,44 @@
+.main-h-screen{
+    min-height:100vh;
+}
+
+.bg-red{
+    background-color: red;
+}
+
+.mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex{
+    display:flex;
+}
+
+.items-center{
+    align-items: center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.font-bold{
+    font-weight: bold;
+}
+
+.big-font-size{
+    font-size: 2.5rem;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.m-2{
+    margin: 20px;
+}
