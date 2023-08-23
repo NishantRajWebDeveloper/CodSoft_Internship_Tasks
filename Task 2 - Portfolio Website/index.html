@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - Nishant Raj</title>
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1a46c983f7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img class="logo" src="Images/logo.png" alt="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Nishant</span> <br>Raj From U.P. , India</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- About section -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img class="user" src="Images/user.jpg" alt="Nishant Raj">
+                </div>
+
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello there! I'm Nishant Raj, a highly motivated and aspiring Frontend Web Developer actively
+                        seeking an internship opportunity to bring my creative vision to life. My journey in Computer
+                        Science & Engineering at Quantum School of Technology has equipped me with a strong foundation
+                        and a hunger for continuous growth.
+
+                        With a flair for HTML, CSS, JavaScript, and Bootstrap, I am committed to crafting seamless and
+                        visually captivating user interfaces. As a detail-oriented individual, I believe in the power of
+                        clean code and user-centric design to deliver exceptional digital experiences.</p>
+
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experince')">Experince</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Frontend Web Developer</span></li>
+                            <li>HTML <br>CSS <br>JAVASCRIPT <br> BOOTSTRAP</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experince">
+                        <ul>
+                            <li><span>August - September 2023</span><br>Internship at Interndev</li>
+                            <li><span>July - August 2023</span><br>Internship at Codsoft</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-2026</span><br>B.tech From Quantum University</li>
+                            <li><span>2022</span><br>Senior Secondary (XII), Science From Jai Bharat Inter College
+                                <br>(UP BOARD board)
+                                <br>Percentage: 85.33%
+                            </li>
+                            <li><span>2020</span><br>Secondary (X) From Jai Bharat Inter College
+                                <br>(UP BOARD board)
+                                <br>Percentage: 88.33%
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        let tablinks = document.getElementsByClassName('tab-links');
+        let tabcontents = document.getElementsByClassName('tab-contents');
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+    <!-----------services section ----------->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>User Interface (UI) Design</h2>
+                    <p>Frontend developers collaborate with designers to implement the visual design of a website. I
+                        ensure that the layout, colors, typography, and overall design align with the intended user
+                        experience.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Responsive Design</h2>
+                    <p>Frontend developers make sure that websites are accessible and usable across different devices
+                        and screen sizes. This involves using techniques like media queries and flexible layouts.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-searchengin"></i>
+                    <h2>Web Performance Optimization</h2>
+                    <p>Frontend developers work to improve the speed and performance of websites. This can include tasks
+                        like optimizing images, minifying code, and implementing caching strategies.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- contact  -->
+
+    <div class="contact">
+        <h1>Contact Us</h1>
+        <form action="#" method="post" class="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required>
+          
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+</body>
+
+</html>
