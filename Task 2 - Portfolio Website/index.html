@@ -15,13 +15,15 @@
         <div class="container">
             <nav>
                 <img class="logo" src="Images/logo.png" alt="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
 
             <div class="header-text">
@@ -31,6 +33,17 @@
         </div>
     </div>
 
+    <script>
+        let sidemenu = document.getElementById("sidemenu");
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+    </script>
     <!-- About section -->
 
     <div id="about">
@@ -142,26 +155,95 @@
         </div>
     </div>
 
-    <!-- contact  -->
+    <!-- portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="work1">
+                    <div class="layer">
+                        <h3>Social Media Web app</h3>
+                        <p>This is an amazing web app .That is created by me</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" alt="work2">
+                    <div class="layer">
+                        <h3> Chat Web app</h3>
+                        <p>This is an amazing web app .That is created by me</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" alt="work3">
+                    <div class="layer">
+                        <h3>online shopping Web app</h3>
+                        <p>This is an amazing web app .That is created by me</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
 
-    <div class="contact">
-        <h1>Contact Us</h1>
-        <form action="#" method="post" class="contact-form">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-          
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          
-          <label for="subject">Subject:</label>
-          <input type="text" id="subject" name="subject" required>
-          
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-          
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+    <!----contact--->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 0123456789</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter-square"></i></a>
+                        <a href=""><i class=" fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                    </div><br>
+                    <a href="Images/Nishant Raj cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Messiage"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright &copy; Nishant. made with <i class="fa-solid fa-heart"></i> by Nishnat Raj </p>
+        </div>
+    </div>
+
+    <script>
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzeA4af7rbg9VcoOeSPzOKtSFy8_jTGPk1kze1Mck-PhMKqD2F04toRWrW6o_RhfGRc4w/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+
 </body>
 
 </html>
